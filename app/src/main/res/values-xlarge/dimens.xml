@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">8dp</dimen>
+
+    <dimen name="text_button">40dp</dimen>
+    <dimen name="text_button_small">32dp</dimen>
+    <dimen name="text_number">64dp</dimen>
+    <dimen name="text_screen">144dp</dimen>
+    <dimen name="text_title">48dp</dimen>
+
+    <dimen name="unit">96dp</dimen>
+    <dimen name="unit_and_half">144dp</dimen>
+    <dimen name="unit_double">192dp</dimen>
+    <dimen name="unit_triple">288dp</dimen>
+    <dimen name="unit_small">80dp</dimen>
+    <dimen name="unit_third">32dp</dimen>
+
+    <dimen name="color_bar_inset">4dp</dimen>
+    <dimen name="color_bar_corner">4dp</dimen>
+
+    <dimen name="warn_diameter">24dp</dimen>
+    <dimen name="warn_inset_vertical">4dp</dimen>
+    <dimen name="warn_inset1">8dp</dimen>
+    <dimen name="warn_inset2">36dp</dimen>
+    <dimen name="warn_inset3">64dp</dimen>
+</resources>

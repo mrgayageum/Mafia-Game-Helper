@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/warn_element"
+        android:top="@dimen/warn_inset_vertical"
+        android:bottom="@dimen/warn_inset_vertical"
+        android:left="@dimen/warn_inset1"
+        android:right="@dimen/warn_inset3">
+    </item>
+    <item
+        android:drawable="@drawable/warn_element"
+        android:top="@dimen/warn_inset_vertical"
+        android:bottom="@dimen/warn_inset_vertical"
+        android:left="@dimen/warn_inset2"
+        android:right="@dimen/warn_inset2">
+    </item>
+</layer-list>

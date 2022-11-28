@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/margin"
+    android:layout_marginLeft="@dimen/margin"
+    android:layout_marginRight="@dimen/margin"
+    android:layout_marginTop="@dimen/margin">
+
+
+    <TextView
+        android:id="@+id/noobModeText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/text_number"
+        android:gravity="center"
+        android:text="Здесь будут инструкции нуб-режима, если руки дойдут"
+        android:textSize="@dimen/text_button_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/minute"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:stateListAnimator="@null"
+        android:text="60"
+        android:textSize="@dimen/text_button"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/noobModeText" />
+
+    <Button
+        android:id="@+id/halfMinute"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:stateListAnimator="@null"
+        android:text="30"
+        android:textSize="@dimen/text_button"
+        app:layout_constraintStart_toEndOf="@+id/minute"
+        app:layout_constraintTop_toBottomOf="@+id/noobModeText" />
+
+    <ImageButton
+        android:id="@+id/pause"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/minute"
+        app:srcCompat="@drawable/ic_baseline_pause" />
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="@dimen/unit_double"
+        android:layout_height="@dimen/unit"
+        android:stateListAnimator="@null"
+        android:text="@string/pass"
+        android:textSize="@dimen/text_button"
+        app:layout_constraintStart_toEndOf="@+id/pause"
+        app:layout_constraintTop_toBottomOf="@+id/halfMinute" />
+
+    <Button
+        android:id="@+id/addTime"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:stateListAnimator="@null"
+        android:text="+5"
+        android:textSize="@dimen/text_button"
+        app:layout_constraintStart_toEndOf="@+id/halfMinute"
+        app:layout_constraintTop_toBottomOf="@+id/noobModeText" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="@dimen/unit_double"
+        android:layout_height="@dimen/unit_double"
+        android:gravity="center"
+        android:text="‒‒"
+        android:textSize="@dimen/text_screen"
+        app:layout_constraintStart_toEndOf="@+id/addTime"
+        app:layout_constraintTop_toBottomOf="@+id/noobModeText" />
+
+    <ImageButton
+        android:id="@+id/warn"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintTop_toBottomOf="@+id/cancelVoting"
+        app:srcCompat="@drawable/ic_warn" />
+
+    <ImageButton
+        android:id="@+id/backwardButton"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:enabled="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/forwardButton"
+        app:layout_constraintTop_toBottomOf="@+id/cancelVoting"
+        app:srcCompat="@drawable/ic_baseline_undo" />
+
+    <ImageButton
+        android:id="@+id/forwardButton"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:enabled="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/strictDelete"
+        app:layout_constraintTop_toBottomOf="@+id/cancelVoting"
+        app:srcCompat="@drawable/ic_baseline_redo" />
+
+    <ImageButton
+        android:id="@+id/strictDelete"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:enabled="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/warn"
+        app:layout_constraintTop_toBottomOf="@+id/cancelVoting"
+        app:srcCompat="@drawable/ic_cross" />
+
+    <Button
+        android:id="@+id/cancelVoting"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/unit"
+        android:stateListAnimator="@null"
+        android:text="@string/cancel_voting"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_button_small"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toEndOf="@+id/info"
+        app:layout_constraintTop_toBottomOf="@+id/noobModeText" />
+
+    <Button
+        android:id="@+id/info"
+        android:layout_width="@dimen/unit_triple"
+        android:layout_height="@dimen/unit"
+        android:enabled="false"
+        android:stateListAnimator="@null"
+        android:text="@string/info"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_button_small"
+        app:layout_constraintStart_toEndOf="@+id/timerText"
+        app:layout_constraintTop_toBottomOf="@+id/noobModeText" />
+
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="@dimen/unit_triple"
+        android:layout_height="@dimen/unit"
+        android:enabled="false"
+        android:stateListAnimator="@null"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_button_small"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/cancelVoting" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/rowSpeak"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="1"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="2"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="3"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="4"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="5"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="6"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="7"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="8"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="9"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="10"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="11"
+                android:textSize="@dimen/text_button" />
+
+            <Button
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="12"
+                android:textSize="@dimen/text_button" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowWarns"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_title"
+                android:layout_span="12"
+                android:gravity="center"
+                android:text="Здесь будет описание состояния игры"
+                android:textSize="@dimen/text_button_small" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowGameState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_third"
+                app:srcCompat="@drawable/color_bar" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/kill"
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/role_mafia" />
+
+            <ImageButton
+                android:id="@+id/donCheck"
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/role_don" />
+
+            <ImageButton
+                android:id="@+id/sheriffCheck"
+                android:layout_width="@dimen/unit"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/role_sheriff" />
+
+            <ImageButton
+                android:id="@+id/add"
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_voting" />
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_delete" />
+
+            <ImageButton
+                android:id="@+id/carCrash"
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@mipmap/accident" />
+
+            <TextView
+                android:id="@+id/addedForVoting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unit"
+                android:layout_span="6"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_button" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_title"
+                android:layout_span="3"
+                android:gravity="center"
+                android:text="@string/night"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_button_small" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_title"
+                android:layout_span="3"
+                android:gravity="center"
+                android:text="@string/day"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_button_small" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_title"
+                android:layout_span="6"
+                android:gravity="center"
+                android:text="@string/voting"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_button_small" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AlexandrOS Mafia Game</string>
+    <string name="copyright">© Alexander Rossokhin  2021</string>
+    <string name="credits">Icons made by Freepik from www.flaticon.com</string>
+
+    <string name="players_num">Количество игроков</string>
+    <string name="randomise">Распределить</string>
+    <string name="start">Начать игру</string>
+    <string name="end">Завершить игру</string>
+
+    <string name="minute">1 минута</string>
+    <string name="halfminute">30 секунд</string>
+    <string name="pass">Pass</string>
+    <string name="night">Ночь</string>
+    <string name="day">День</string>
+    <string name="voting">Выставлены на голосование</string>
+    <string name="cancel_voting">Отмена голосования</string>
+    <string name="next">Далее</string>
+    <string name="info">Лог действий</string>
+    <string name="noob_mode">Режим новичка</string>
+</resources>

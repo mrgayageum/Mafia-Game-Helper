@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pregame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/margin"
+    android:layout_marginLeft="@dimen/margin"
+    android:layout_marginRight="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    tools:context=".PregameFragment">
+
+    <Button
+        android:id="@+id/buttonRandom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null"
+        android:text="@string/randomise"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_button"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStart"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:stateListAnimator="@null"
+        android:text="@string/start"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_button"
+        app:layout_constraintEnd_toStartOf="@id/buttonEnd"
+        app:layout_constraintStart_toEndOf="@id/buttonRandom"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <Button
+        android:id="@+id/buttonEnd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:stateListAnimator="@null"
+        android:text="@string/end"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_button"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toEndOf="@+id/buttonStart"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/unit"
+        android:max="6"
+        android:progress="4"
+        app:layout_constraintEnd_toStartOf="@+id/playersNum"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@id/titlePlayersNum" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRandom">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="11"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit_small"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_number" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/positionRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+            <TextView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit"
+                android:gravity="center"
+                android:textSize="@dimen/text_number" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/roleRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+            <ImageView
+                android:layout_width="@dimen/unit"
+                android:layout_height="@dimen/unit" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/titlePlayersNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/players_num"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/text_title"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playersNum"
+        android:layout_width="@dimen/unit"
+        android:layout_height="@dimen/unit"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/text_number"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/titlePlayersNum" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
